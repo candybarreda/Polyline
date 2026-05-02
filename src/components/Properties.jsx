@@ -3,19 +3,19 @@ import PropertyCard from "./PropertyCard"
 const Properties = () => {
   const data = [
     {
-      image: "/src/assets/excabadora.jpg",
+      image: "/images/excabadora.jpg",
       title: "Maquinaria",
       price: "$0",
       location: "Lima",
     },
     {
-      image: "/src/assets/anclajes.jpg",
+      image: "/images/anclajes.jpg",
       title: "Anclajes",
       price: "$0",
       location: "Lima",
     },
     {
-      image: "/src/assets/zorritos.jpg",
+      image: "/images/zorritos.jpg",
       title: "zorritos",
       price: "$0",
       location: "Piura",
