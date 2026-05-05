@@ -5,7 +5,7 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
-import Properties from "./components/Properties"
+import Properties from "./components/properties"
 import Footer from "./components/Footer"
 import WhatsappButton from "./components/WhatsappButton"
 import Nosotros from "./components/Nosotros"
@@ -17,8 +17,8 @@ function App() {
     <div>
       <Navbar />
       <Hero />
-      <Nosotros />
       <Properties />
+      <Nosotros />
       <Footer/>
       <WhatsappButton />
       
