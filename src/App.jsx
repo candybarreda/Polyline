@@ -5,12 +5,12 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
-import Properties from "./components/properties"
+import Properties from "./components/Properties"
 import Footer from "./components/Footer"
 import WhatsappButton from "./components/WhatsappButton"
 import Nosotros from "./components/Nosotros"
 import Contacto from "./components/Contacto"
-
+import Modal from "./components/Modal";
 
 function App() {
   return (

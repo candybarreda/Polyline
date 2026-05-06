@@ -19,7 +19,7 @@ const Nosotros = () => {
           <ul className="space-y-3 text-gray-700">
             <li>✅ Habilitaciones Urbanas</li>
             <li>✅ Demolición de edificaciones de hasta 3,500 m² techados</li>
-            <li>✅ Edificaciones unifamiliares y multifamiliares</li>
+            <li>✅ Remodelaciones que transforman espacios.</li>
           </ul>
         </div>
 

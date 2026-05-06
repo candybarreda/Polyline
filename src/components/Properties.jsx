@@ -2,10 +2,14 @@ import { useState } from "react"
 import PropertyCard from "./PropertyCard"
 import Modal from "./Modal"
 
+
+
+
 const Properties = () => {
   const [open, setOpen] = useState(false)
   const [selectedImages, setSelectedImages] = useState([])
-
+  const [selectedTitle, setSelectedTitle] = useState("")
+  
   const data = [
     {
       image: "/images/excabadora.jpg",
@@ -37,11 +41,11 @@ const Properties = () => {
     },
   ]
 
-  const openModal = (images) => {
+  const openModal = (images, title) => {
     setSelectedImages(images)
+    setSelectedTitle(title)
     setOpen(true)
   }
-
   return (
     <section id="proyectos" className="py-20 px-10 bg-gray-100">
 
@@ -51,17 +55,23 @@ const Properties = () => {
 
       <div className="grid md:grid-cols-3 gap-8">
         {data.map((item, index) => (
-          <div key={index} onClick={() => openModal(item.images)}>
-            <PropertyCard {...item} />
+          <div 
+          key={index} 
+          onClick={() => openModal(item.images, item.title)}>
+            <PropertyCard  
+            key={index}
+            {...item}
+            onClick={() => openModal(item.images, item.title)} />
           </div>
         ))}
       </div>
 
       {/* Modal */}
       <Modal
-        isOpen={open}
-        onClose={() => setOpen(false)}
-        images={selectedImages}
+      isOpen={open}
+      onClose={() => setOpen(false)}
+      images={selectedImages}
+      title={selectedTitle}
       />
 
     </section>

@@ -52,12 +52,12 @@ const Navbar = () => {
       {/* Botón CTA */}
       <div className="hidden md:block">
         <a
-          href="#contacto"
+          href="#proyectos"
           className="bg-sky-500 hover:bg-sky-600 text-white px-5 py-2 rounded-xl transition duration-300 shadow-md hover:scale-105"
         >
           Proyectos
         </a>
-      </div>
+      </div>  
 
     </nav>
   );

@@ -1,6 +1,9 @@
-const PropertyCard = ({ image, title, price, location }) => {
+const PropertyCard = ({ image, title, location, onClick }) => {
   return (
-    <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+    <div 
+    onClick={onClick}
+    className="cursor-pointer bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transition"
+    > 
 
       {/* Imagen */}
       <div className="relative">
@@ -31,9 +34,7 @@ const PropertyCard = ({ image, title, price, location }) => {
             
           </span>
 
-          <button className="text-sm bg-blue-500 text-white px-3 py-1 rounded-lg">
-            View
-          </button>
+         
         </div>
 
       </div>
