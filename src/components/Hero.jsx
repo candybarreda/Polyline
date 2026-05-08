@@ -1,51 +1,61 @@
 const Hero = () => {
   return (
-    <section id="inicio" className="relative h-screen flex items-center justify-center">
+    <section
+      id="inicio"
+      className="relative h-screen flex items-center justify-center overflow-hidden"
+    >
 
-      {/* Imagen de fondo */}
-      <img
-        src="/images/planing.jpg"
-        alt="hero"
-        className="absolute w-full h-full object-cover"
-      />
+      {/* Video de fondo */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover"
+      >
+        <source src="/videos/video.mp4" type="video/mp4" />
+      </video>
 
-      {/* Overlay premium */}
-      <div className="absolute w-full h-full bg-gradient-to-r from-sky-900/70 via-sky-600/50 to-cyan-400/40"></div>
+      {/* Overlay oscuro premium */}
+      <div className="absolute inset-0 bg-black/60"></div>
+
+      {/* Gradiente elegante */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-sky-900/40 to-black/50"></div>
 
       {/* Contenido */}
-      <div className="relative text-center text-white px-6 max-w-4xl">
+      <div className="relative z-10 text-center text-white px-6 max-w-5xl">
 
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
-        Construimos el futuro que imaginas<br className="hidden md:block"/> 
+        <span className="uppercase tracking-[5px] text-sky-400 text-sm md:text-base">
+          Ingeniería • Construcción • Arquitectura
+        </span>
+
+        <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mt-4 mb-6">
+          Construimos el <span className="text-sky-400">futuro</span> que imaginas
         </h1>
 
-        <p className="mb-10 text-lg md:text-xl text-gray-200">
-        Construcción inteligente para un mundo moderno.
-
+        <p className="mb-10 text-lg md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
+          Soluciones modernas e innovadoras para proyectos de construcción,
+          infraestructura y desarrollo arquitectónico.
         </p>
 
-        {/* Buscador estilo Airbnb */}
-        <div className="bg-white/90 backdrop-blur-md p-4 md:p-5 rounded-2xl flex flex-col md:flex-row gap-3 shadow-2xl">
+        {/* Buscador premium */}
+        <div className="bg-white/10 backdrop-blur-xl border border-white/20 p-4 md:p-5 rounded-2xl flex flex-col md:flex-row gap-3 shadow-2xl max-w-3xl mx-auto">
 
-          
-
-          <select className="p-3 outline-none rounded-lg w-full text-gray-700">
-            <option>Maquinria</option>
+          <select className="p-4 outline-none rounded-xl w-full bg-white/90 text-gray-700">
+            <option>Maquinaria</option>
             <option>Anclajes</option>
-            <option>construcción</option>
+            <option>Construcción</option>
           </select>
 
-          <button className="bg-sky-500 hover:bg-sky-600 text-white px-6 py-3 rounded-xl transition duration-300 hover:scale-105 shadow-md">
+          <button className="bg-sky-600 hover:bg-sky-700 text-white px-8 py-4 rounded-xl transition duration-300 hover:scale-105 shadow-lg font-semibold">
             Buscar
           </button>
 
         </div>
 
-       
       </div>
-
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

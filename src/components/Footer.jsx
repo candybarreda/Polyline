@@ -1,106 +1,129 @@
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import Contacto from "./Contacto";
 
 const Footer = () => {
   return (
     <footer
       id="contacto"
-      className="bg-gradient-to-r from-sky-900 via-sky-700 to-cyan-500 text-white px-6 md:px-10 py-16"
+      className="bg-[#123458] text-white px-6 md:px-10 pt-20 pb-10"
     >
-      <div className="grid md:grid-cols-3 gap-12 max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-14">
 
         {/* Logo */}
         <div>
-          <div className="flex items-center gap-3 mb-4">
+
+          <div className="flex items-center gap-4 mb-6">
+
             <img
               src="/images/logo.png"
               alt="logo"
-              className="w-12 h-12 object-contain"
+              className="w-14 h-14 object-contain"
             />
-            <h1 className="text-2xl font-bold">POLYLINE</h1>
+
+            <div>
+              <h1 className="text-3xl font-extrabold tracking-wide">
+                POLYLINE
+              </h1>
+
+              <span className="text-sm tracking-[4px] uppercase text-[#4A90A4]">
+                Constructora
+              </span>
+            </div>
+
           </div>
 
-          <p className="text-gray-200">
-            Creamos espacios modernos pensados para tu futuro y bienestar.
+          <p className="text-gray-300 leading-relaxed max-w-sm">
+            Creamos espacios modernos, seguros y funcionales
+            para proyectos de construcción e infraestructura.
           </p>
+
         </div>
 
         {/* Contacto */}
-        <div className="space-y-6">
+        <div className="space-y-8">
+
           <div>
-            <h3 className="font-semibold text-lg mb-2">Ubicación</h3>
-            <p className="text-gray-200">
+            <h3 className="font-bold text-xl mb-3 text-[#F97316]">
+              Ubicación
+            </h3>
+
+            <p className="text-gray-300 leading-relaxed">
               Av. Benavides 3008, Lima
             </p>
           </div>
 
           <div>
-            <h3 className="font-semibold text-lg mb-2">Contacto</h3>
-            <p>+51 943 812 536</p>
-            <p>polylinesac@yahoo.com</p>
+            <h3 className="font-bold text-xl mb-3 text-[#F97316]">
+              Contacto
+            </h3>
+
+            <p className="text-gray-300">
+              +51 943 812 536
+            </p>
+
+            <p className="text-gray-300">
+              polylinesac@yahoo.com
+            </p>
           </div>
 
           <div>
-            <h3 className="font-semibold text-lg mb-2">Horario</h3>
-            <p className="text-gray-200">
+            <h3 className="font-bold text-xl mb-3 text-[#F97316]">
+              Horario
+            </h3>
+
+            <p className="text-gray-300 leading-relaxed">
               Lunes a viernes <br />
               09:00 a.m. - 05:00 p.m.
             </p>
           </div>
+
         </div>
 
-        {/* Formulario moderno */}
-        <div className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-2xl border border-white/20">
+        {/* Formulario */}
+        <div
+          className="
+          bg-white/10
+          backdrop-blur-xl
+          p-8
+          rounded-3xl
+          shadow-2xl
+          border
+          border-white/10
+          "
+        >
 
-          <h3 className="text-xl font-semibold mb-4">
+          <h3 className="text-2xl font-bold mb-6">
             Déjanos tu consulta
           </h3>
 
-          <form className="space-y-4">
+          <Contacto/>
 
-            <input
-              type="text"
-              placeholder="Tu Nombre *"
-              className="w-full p-3 rounded-lg bg-white/80 text-gray-800 outline-none"
-            />
-
-            <input
-              type="email"
-              placeholder="Tu Email *"
-              className="w-full p-3 rounded-lg bg-white/80 text-gray-800 outline-none"
-            />
-
-            <input
-              type="text"
-              placeholder="Tu Teléfono"
-              className="w-full p-3 rounded-lg bg-white/80 text-gray-800 outline-none"
-            />
-
-            <textarea
-              placeholder="Tu Mensaje"
-              rows="4"
-              className="w-full p-3 rounded-lg bg-white/80 text-gray-800 outline-none"
-            ></textarea>
-
-            <button className="bg-sky-500 hover:bg-sky-600 w-full py-3 rounded-xl transition duration-300 hover:scale-105 shadow-lg">
-              Enviar Consulta
-            </button>
-
-          </form>
         </div>
 
       </div>
 
-      {/* Footer bottom */}
-      <div className="mt-12 border-t border-white/20 pt-6 text-center">
+      {/* Bottom */}
+      <div className="mt-16 border-t border-white/10 pt-8 text-center">
 
-        <h2 className="font-semibold mb-4">Síguenos</h2>
+        <h2 className="font-semibold mb-6 text-[#4A90A4] tracking-wide uppercase">
+          Síguenos
+        </h2>
 
-        <div className="flex justify-center gap-6 text-xl mb-4">
+        {/* Redes */}
+        <div className="flex justify-center gap-5 text-xl mb-6">
 
           <a
             href="https://www.facebook.com/PolylineSalas"
             target="_blank"
-            className="bg-white/20 p-3 rounded-full hover:bg-blue-600 transition"
+            className="
+            bg-white/10
+            p-4
+            rounded-full
+            hover:bg-[#4A90A4]
+            transition-all
+            duration-300
+            hover:scale-110
+            "
           >
             <FaFacebook />
           </a>
@@ -108,7 +131,15 @@ const Footer = () => {
           <a
             href="https://www.instagram.com/arquitectosalasperu/"
             target="_blank"
-            className="bg-white/20 p-3 rounded-full hover:bg-pink-500 transition"
+            className="
+            bg-white/10
+            p-4
+            rounded-full
+            hover:bg-[#F97316]
+            transition-all
+            duration-300
+            hover:scale-110
+            "
           >
             <FaInstagram />
           </a>
@@ -116,18 +147,27 @@ const Footer = () => {
           <a
             href="https://api.whatsapp.com/send?phone=51943812536"
             target="_blank"
-            className="bg-white/20 p-3 rounded-full hover:bg-green-500 transition"
+            className="
+            bg-white/10
+            p-4
+            rounded-full
+            hover:bg-green-500
+            transition-all
+            duration-300
+            hover:scale-110
+            "
           >
             <FaWhatsapp />
           </a>
 
         </div>
 
-        <p className="text-sm text-gray-200">
+        <p className="text-sm text-gray-400">
           © 2025 POLYLINE. Todos los derechos reservados.
         </p>
 
       </div>
+
     </footer>
   );
 };
